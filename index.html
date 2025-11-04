@@ -1,66 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rain Sense 🌧️</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Route Planner</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-
-  <!-- Login/Register -->
-  <div class="container" id="auth-container">
+  <div id="auth-container" class="container">
     <h2 id="formTitle">🔐 Login</h2>
-    <input type="text" id="username" placeholder="Username" required>
-    <input type="password" id="password" placeholder="Password" required>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
     <button id="authBtn">Login</button>
-    <p id="toggleText">Don’t have an account? <a href="#" id="toggleForm">Register</a></p>
+    <p id="toggleText">Don't have an account? <a href="#" id="toggleForm">Register</a></p>
   </div>
 
-  <!-- Rain question -->
-  <div class="container" id="rain-container" style="display:none;">
-    <h2>🌦️ Is it raining?</h2>
-    <button id="rainYes">Yes 🌧️</button>
-    <button id="rainNo">No ☀️</button>
+  <div id="rain-container" class="container" style="display: none;">
+    <h2>🌧️ Is it raining in your area?</h2>
+    <button id="rainYes">Yes</button>
+    <button id="rainNo">No</button>
   </div>
 
-  <!-- Location -->
-  <div class="container" id="location-container" style="display:none;">
-    <h2>📍 Current Location</h2>
-    <button id="detectLoc">Use My Location</button>
-    <p>or</p>
-    <input type="text" id="manualLoc" placeholder="Enter current location">
+  <div id="location-container" class="container" style="display: none;">
+    <h2>📍 Detect your current location</h2>
+    <button id="detectLoc">Use GPS</button>
+    <input type="text" id="manualLoc" placeholder="Or enter manually" />
     <button id="manualLocBtn">Submit</button>
   </div>
 
-  <!-- Optional Pickup -->
-  <div class="container" id="pickup-container" style="display:none;">
-    <h2>🚗 Pickup Location (Optional)</h2>
-    <input type="text" id="pickupLoc" placeholder="Enter pickup location">
-    <button id="pickupBtn">Next</button>
+  <div id="pickup-container" class="container" style="display: none;">
+    <h2>🚗 Pickup Point (optional)</h2>
+    <input type="text" id="pickupLoc" placeholder="Enter pickup location" />
+    <button id="pickupBtn">Submit</button>
     <button id="skipPickup">Skip</button>
   </div>
 
-  <!-- Destination -->
-  <div class="container" id="destination-container" style="display:none;">
+  <div id="destination-container" class="container" style="display: none;">
     <h2>🎯 Destination</h2>
-    <input type="text" id="destinationInput" placeholder="Enter destination">
+    <input type="text" id="destinationInput" placeholder="Enter destination" />
     <button id="destSubmit">Show Route</button>
   </div>
 
-  <!-- Map -->
-  <div id="map-container" style="display:none;">
-    <h2 style="text-align:center;">🗺️ Safe Route Finder</h2>
-    <div id="map" style="height:500px;width:90%;margin:auto;border-radius:12px;"></div>
-    <div class="directions-container">
-      <h3>Route Details</h3>
-      <p id="time1"></p>
-      <p id="time2"></p>
-    </div>
+  <div id="map-container" class="container" style="display: none;">
+    <h2>🗺️ Route Map</h2>
+    <div id="map" style="height: 400px;"></div>
+    <p id="time1"></p>
+    <p id="time2"></p>
   </div>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

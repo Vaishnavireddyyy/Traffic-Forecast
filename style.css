@@ -1,6 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f0f2f5;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #a2d2ff, #cdb4db);
+  color: #333;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -9,51 +10,38 @@ body {
 .container {
   margin: 40px auto;
   padding: 20px;
-  width: 300px;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 input, button {
-  margin: 10px 0;
-  padding: 10px;
+  display: block;
   width: 90%;
-  border: 1px solid #ccc;
+  margin: 10px auto;
+  padding: 10px;
   border-radius: 8px;
-  font-size: 15px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 button {
-  background: #007bff;
+  background-color: #0077b6;
   color: white;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
 }
 
 button:hover {
-  background: #0056b3;
+  background-color: #023e8a;
 }
 
 a {
-  color: #007bff;
+  color: #0077b6;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-}
-
-.directions-container {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 600px;
-  margin: 20px auto;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-}
-
-h2 {
-  margin-top: 0;
 }
